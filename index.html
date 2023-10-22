@@ -6,24 +6,29 @@
     <title>Focus Timer - Pomodoro</title>
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="Timer style pomodoro">
-    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    <div class="day-night">
-        <button><img src="assets/sun.svg" alt=""></button>
-    </div>
-    <div class="clock">
-        <div class="minutes">25</div>
-        <div class="two-points">:</div>
-        <div class="seconds">00</div>
-    </div>
-    <div class="controls">
-        <div class="play"><img src="assets/play.svg" alt=""></div>
-        <div class="pause"><img src="assets/pause.svg" alt=""></div>
-        <div class="reset"><img src="assets/reset.svg" alt=""></div>
-        <div class="stop"><img src="assets/stop.svg" alt=""></div>
-        <div class="mute"><img src="assets/mute.svg" alt=""></div>
-        <div class="sound"><img src="assets/sound.svg" alt=""></div>
+    <div id="app">
+        <button id="toggle-mode">
+            <span>Ativar/Desativar Light Mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+        <section id="timer" class="flex">
+            <span id="minutes">25</span>
+            <span id="two-points">:</span>
+            <span id="seconds">00</span>
+        </section>
+        <section id="controls" class="flex">
+            <button class="ph ph-play-circle"></button>
+            <button class="ph ph-pause-circle"></button>
+            <button class="ph ph-timer"></button>
+            <button class="ph ph-stop-circle"></button>
+            <button class="ph ph-speaker-none"></button>
+            <button class="ph ph-speaker-high"></button>
+        </section>
     </div>
     <script src="main.js"></script>
 </body>
