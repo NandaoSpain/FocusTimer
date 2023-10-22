@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="running music-on light">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Focus Timer - Pomodoro</title>
@@ -8,11 +10,12 @@
     <meta name="description" content="Timer style pomodoro">
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <button id="toggle-mode">
-            <span>Ativar/Desativar Light Mode</span>
+            <span class="sr-only">Activate/Desactivate Light Mode</span>
             <i class="ph-bold ph-sun"></i>
             <i class="ph-bold ph-moon"></i>
         </button>
@@ -22,12 +25,24 @@
             <span id="seconds">00</span>
         </section>
         <section id="controls" class="flex">
-            <button class="ph ph-play-circle"></button>
-            <button class="ph ph-pause-circle"></button>
-            <button class="ph ph-timer"></button>
-            <button class="ph ph-stop-circle"></button>
-            <button class="ph ph-speaker-none"></button>
-            <button class="ph ph-speaker-high"></button>
+            <button class="ph ph-play-circle">
+                <span class="sr-only">Play counter</span>
+            </button>
+            <button class="ph ph-pause-circle">
+                <span class="sr-only">Pause counter</span>
+            </button>
+            <button class="ph ph-timer secondary">
+                <span class="sr-only">Reset counter</span>
+            </button>
+            <button class="ph ph-stop-circle secondary">
+                <span class="sr-only">Stop counter</span>
+            </button>
+            <button class="ph ph-speaker-none secondary">
+                <span class="sr-only">Stop music</span>
+            </button>
+            <button class="ph ph-speaker-high">
+                <span class="sr-only">Play music</span>
+            </button>
         </section>
     </div>
     <script src="main.js"></script>
