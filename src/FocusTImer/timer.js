@@ -1,6 +1,6 @@
 import state from './state.js'
 import * as el from './elements.js'
-import { registerControls } from './events.js'
+import { reset } from './actions.js'
 
 export function countDown() {
     if(!state.isRunning) {
@@ -17,7 +17,8 @@ export function countDown() {
         minutes--
     }
 
-    if(minutes < 0) {}
+    if(minutes < 0) {
+        reset()
         return
     }
 
